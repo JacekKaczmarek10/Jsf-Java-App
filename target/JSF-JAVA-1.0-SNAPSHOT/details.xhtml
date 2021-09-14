@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      xml:lang="en" lang="en">
+<head>
+    <title>Product details</title>
+</head>
+<body>
+        <f:facet name="header">ID</f:facet>
+        <h:outputText value="#{product.getProduct().id}"/>
+        <f:facet name="header">NAME</f:facet>
+        <h:outputText value="#{product.getProduct().name}"/>
+        <f:facet name="header">PRICE</f:facet>
+        <h:outputText value="#{product.getProduct().price}"/>
+        <f:facet name="header">QUANTITY</f:facet>
+        <h:outputText value="#{product.getProduct().quantity}"/>
+        <f:facet name="header">PRODUCTION DATE</f:facet>
+        <h:outputText value="#{product.getProduct().productionDate}"/>
+</body>
+</html>
