@@ -9,5 +9,6 @@
 </h1>
 <br/>
 <a href="index.xhtml">Tabela</a>
+<a href="addindex.xhtml">Dodawanie produktu</a>
 </body>
 </html>

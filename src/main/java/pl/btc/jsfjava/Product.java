@@ -4,8 +4,8 @@ import javax.faces.bean.ManagedBean;
 import java.util.Date;
 
 public class Product {
-    private final int id;
-    private final String name;
+    private  int id;
+    public String name;
     private final float price;
     private final int quantity;
     private final Date productionDate;
@@ -34,5 +34,16 @@ public class Product {
 
     public Date getProductionDate() {
         return productionDate;
+    }
+
+
+    public String add(){
+        System.out.println("PRODUCT INSERETED");
+        System.out.println(name + price + quantity + productionDate);
+        System.out.println(name.length());
+        if(quantity>10){
+            return "fail";
+        }
+        return "sucess";
     }
 }
