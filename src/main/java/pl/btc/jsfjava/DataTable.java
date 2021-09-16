@@ -1,10 +1,12 @@
 package pl.btc.jsfjava;
 
 
+import javax.annotation.Resource;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,6 +14,11 @@ import java.util.List;
 @ManagedBean(name = "product")
 @RequestScoped
 public class DataTable {
+
+    @Resource
+    private DataSource dataSource;
+
+
     FacesContext context = FacesContext.getCurrentInstance();
 
 

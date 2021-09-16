@@ -11,6 +11,7 @@ import javax.persistence.*;
 public class ProductEntity {
 
 
+
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
