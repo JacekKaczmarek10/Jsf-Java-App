@@ -11,7 +11,7 @@ public class App {
         ProductEntity productEntity = new ProductEntity();
         productEntity.setName("JACEK");
 
-    SessionFactory sessionFactory = buildSessionFactory(ProductEntity.class);
+        SessionFactory sessionFactory = buildSessionFactory(ProductEntity.class);
         Session session = sessionFactory.openSession();
         session.save(productEntity);
 

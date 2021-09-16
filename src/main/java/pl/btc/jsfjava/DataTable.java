@@ -18,11 +18,9 @@ public class DataTable {
     @Resource
     private DataSource dataSource;
 
-
     FacesContext context = FacesContext.getCurrentInstance();
 
-
-    public List<Product> productsList;
+    public static List<Product> productsList = new ArrayList<>();
     public Product product;
     public  String objectId = context.getExternalContext()
             .getRequestParameterMap().get("objectId");
@@ -40,7 +38,7 @@ public class DataTable {
 
 
     public List<Product> getProductList() {
-        productsList = new ArrayList<>();
+        System.out.println("LIST");
         productsList.add(new Product(1,"HP Laptop",25000f,5,new Date()));
         productsList.add(new Product(2,"Dell Laptop",30000f,5,new Date()));
         productsList.add(new Product(3,"Lenevo Laptop",28000f,5,new Date()));
@@ -49,8 +47,6 @@ public class DataTable {
         return productsList;
     }
 
-
-
     public Product getProduct() {
         FacesContext context = FacesContext.getCurrentInstance();
         String objectId = context.getExternalContext()
@@ -58,7 +54,5 @@ public class DataTable {
         Product product = productsList.get(Integer.valueOf(objectId)-1);
         return product;
     }
-
-
 
 }
